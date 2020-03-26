@@ -1,0 +1,204 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    AFP - Comparator
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Linear Icons --->
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <!-- CSS Files -->
+  <link href="../assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+	<link href="../assets/css/index.css" rel="stylesheet" />
+	<link href="../assets/css/form.css" rel="stylesheet" />
+	<link href="../assets/css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top bg-primary flex-md-nowrap p-0">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AFP <span class="comparator">Comparator</span></a>
+		<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+						<a class="nav-link nav-link-icon" href="#">
+								<i class="ni ni-settings-gear-65"></i>
+						</a>
+				</li>
+		</ul>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row">
+  		<nav class="col-md-2 bg-default sidebar">
+				<div class="sidebar-sticky">
+					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					<hr class="hr-sidebar">
+					<ul class="nav flex-column top-dashboard" id="listSidebar">
+						<li class="nav-item">
+							<a class="nav-link active">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 1</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 2</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 3</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 4</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 5</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 6</span>
+							</a>
+          	</li>
+					</ul>
+					<a class="add-data-container" href="form.html">
+						<span class="lnr lnr-plus-circle"></span>
+						<span>Ajouter</span>
+					</a>
+					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 top-dashboard">
+				<form>
+					<div class="ct-page-title" style="display: flex;">
+						<h1 class="ct-title" id="content">
+							<span class="afp-name">AFP </span>
+						</h1>
+						<div class="form-group form-title-afp">
+        			<input type="text" class="form-control form-control-alternative" placeholder="Titre de la dépêche AFP" required>
+      			</div>
+    			</div>
+  				<textarea class="form-control form-control-alternative" rows="3" placeholder="Contenu de la dépêche" required></textarea>
+					<hr class="hr-start">
+					
+					<div class="other-article-container">
+						<div class="form-group form-new-article">
+							<span class="form-journal-icon"><span class="lnr lnr-text-align-justify"></span></span>
+							<input type="text" class="form-control form-control-alternative" placeholder="Nom du journal">
+							<button class="btn btn-primary btn-neutral btn-fab btn-icon btn-round delete-button" type="button" onclick="deleteBlockArticle(this);">
+								<span class="lnr lnr-trash"></span>
+							</button>
+						</div>
+
+						<div class="form-group form-new-article">
+							<input type="text" class="form-control form-control-alternative" placeholder="Titre de l'article">
+						</div>
+
+						<textarea class="form-control form-control-alternative" rows="3" placeholder="Contenu de l'article"></textarea>
+						<hr>
+					</div>
+					
+					<div>
+						<button class="btn btn-neutral btn-icon" onclick="addBlockArticle();" type="button">
+								<span class="btn-inner--icon">
+									<span class="lnr lnr-plus-circle"></span>
+								</span>
+							<span class="nav-link-inner--text">Ajouter un article</span>
+						</button>
+
+						<button class="btn btn-primary btn-icon save-button">
+								<span class="btn-inner--icon">
+									<span class="lnr lnr-enter-down"></span>
+								</span>
+							<span class="nav-link-inner--text">Enregistrer</span>
+						</button>
+					</div>
+			
+				</form>
+				<footer class="main-footer">
+				</footer>
+			</main>
+		</div>
+  </div>
+	
+	
+	
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="../assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <script src="../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+	<script src="../assets/js/form.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#searchSidebar").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#listSidebar li").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
