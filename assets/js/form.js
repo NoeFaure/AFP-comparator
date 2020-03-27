@@ -3,9 +3,11 @@ function addBlockArticle (){
 
 	if ($('.other-article-container').length){
 		$('.other-article-container').last().after(block);
+		$('.other-article-container').last().hide().show('slow');
 	}
 	else {
 		$('.hr-start').last().after(block);
+		$('.other-article-container').last().hide().show('slow');
 	}
 }
 
