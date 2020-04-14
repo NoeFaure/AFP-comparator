@@ -58,7 +58,7 @@ body {
 
 .sidebar .nav-link:hover {
 	color: white !important;
-	background-color: #525f7f40;
+	background-image: linear-gradient(90deg, #525f7f40, transparent);
 	border-radius: 4px;
 }
 

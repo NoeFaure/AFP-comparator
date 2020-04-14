@@ -1,0 +1,99 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.progress-b {
+  width: 150px;
+  height: 150px;
+  background: none;
+  position: relative;
+}
+
+.progress-b::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-b>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-b .progress-left {
+  left: 0;
+}
+
+.progress-b .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress-b .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress-b .progress-right {
+  right: 0;
+}
+
+.progress-b .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.progress-b .progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.border-color {
+	border-color: #5e72e4 !important;
+}
+
+.progress-b .text-container {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.progress-b .text-container .text {
+	font-size: 1em;
+	position: relative;
+	bottom: calc(-100% - 1.5em);
+	text-align: center;
+}
+
+.hr-progress {
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
