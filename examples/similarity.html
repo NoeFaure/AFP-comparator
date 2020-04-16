@@ -167,7 +167,7 @@ Coded by www.creative-tim.com
                	<span class="progress-bar border-color"></span>
           		</span>
           		<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold"><span id="table-index">0.0</span><sup class="small">%</sup></div>
+								<div class="h2 font-weight-bold"><span id="table-index">??</span><sup class="small">%</sup></div>
           		</div>
 							<div class="text-container">
 								<h3 class="text">Indice de Jaro-Winkler</h3>
@@ -198,7 +198,7 @@ Coded by www.creative-tim.com
 							<tr>
 								<td>Coronavirus : premier décès d'un médecin hospitalier en France</td>
 								<td>Coronavirus : premier décès d'un médecin hospitalier en France</td>
-								<td><span class="lnr lnr-link"></span></td>
+								<td><a href="https://www.lexpress.fr/actualite/societe/sante/ce-que-l-on-sait-sur-le-premier-medecin-mort-en-france-a-cause-du-coronavirus_2121601.html" class="clic-link">Clic</a></td>
 								<td>L'Express</td>
 								<td>22/03/2020</td>
 								<td><mark>100%</mark></td>
@@ -230,23 +230,77 @@ Coded by www.creative-tim.com
 				<form>
 					<div class="container-column">
 						<div class="column-1">
-							<div class="ct-page-title" style="display: flex;">
-								<h1 class="ct-title article-reference" id="content">
-									<span class="afp-name">Article de référence</span>
-								</h1>
-							</div>
+							<h1 class="ct-title article-reference" id="content">
+								<span class="line-blue"></span>
+								<span class="article-type-name-blue">Dépêche AFP</span>
+								<span class="line-blue"></span>
+							</h1>
+							
+							<div class="form-group">
+        				<input type="text" class="form-control form-control-alternative" id="titreAfp" placeholder="Titre de la dépêche">
+      				</div>
+							
 							<textarea id="content1" class="form-control form-control-alternative textarea-similarity" rows="3" placeholder="Contenu de l'article de référence" required></textarea>
 						</div>
 
 						<div class="column-2">
-							<div class="right-text" style="display: flex;">
-								<h1 class="ct-title article-reference right" id="content">
-									<span class="afp-name">Article à analyser</span>
-								</h1>
-							</div>
-							<textarea id="content2" class="form-control form-control-alternative textarea-similarity" rows="3" placeholder="Contenu de l'article à analyser" required></textarea>
+							<h1 class="ct-title article-reference right" id="content">
+								<span class="line"></span>
+								<span class="article-type-name">Article de presse</span>
+								<span class="line"></span>
+							</h1>
+							
+							<div class="form-group">
+        				<input type="text" class="form-control form-control-alternative" id="titreArticle" placeholder="Titre de l'article">
+      				</div>
+							
+							<textarea id="content2" class="form-control form-control-alternative textarea-similarity" rows="3" placeholder="Contenu de l'article à analyser"></textarea>
 						</div>
 					</div>
+					
+					<h5 class="more-info-title">Informations supplémentaires</h5>
+					<div class="more-info">
+						<div class="column-1">
+							<div class="form-group">
+								<div class="input-group input-group-alternative mb-4">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-link"></i></span>
+									</div>
+									<input class="form-control form-control-alternative" placeholder="Lien vers l'article" type="text" id="linkArticle">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="input-group input-group-alternative mb-4">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="far fa-newspaper"></i></span>
+									</div>
+									<input class="form-control form-control-alternative" placeholder="Nom du journal" type="text" id="journalName">
+								</div>
+							</div>
+						</div>
+						
+						<div class="column-2">
+							<div class="form-group">
+								<div class="input-group input-group-alternative mb-4">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+									</div>
+									<input class="form-control form-control-alternative" placeholder="Date de publication de l'article" type="text" id="dateArticle">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="input-group input-group-alternative mb-4">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-sort-amount-up"></i></span>
+									</div>
+									<input class="form-control form-control-alternative" placeholder="Seuil de détection" type="number" id="seuil" value="100">
+								</div>
+							</div>
+						</div>
+					</div>
+					
 					<hr class="hr-start">
 					<div class="compare-button">
 						<button class="btn btn-primary btn-icon save-button" onclick="actionSimilarity();" type="button">

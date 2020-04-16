@@ -1,7 +1,16 @@
 .article-reference {
+	display: flex;
 	margin-bottom: 0;
   margin-top: 0;
   width: 100%;
+	margin-bottom: 1.5em;
+}
+
+.article-reference .line {
+    border-bottom: 2px solid #5e72e4;
+    flex-grow: 1;
+    position: relative;
+    top: -0.55em;
 }
 
 .right {
@@ -10,6 +19,7 @@
 
 .textarea-similarity {
 	height: 400px !important;
+	margin-bottom: 1em;
 }
 
 .compare-button {
@@ -174,4 +184,41 @@ td mark {
 	border-right: 1px solid #dcdddf;
 	position: relative;
 	margin-left: -0.5px;
+}
+
+.article-type-name {
+	color: #5e72e4;
+	font-weight: bolder;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.article-type-name-blue {
+	color: #0083ca;
+	font-weight: bolder;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.article-reference .line-blue {
+	border-bottom: 2px solid #0083ca;
+	flex-grow: 1;
+	position: relative;
+	top: -0.55em;
+}
+
+.more-info {
+	display: flex;
+	margin-top: 1em;
+}
+
+.more-info-title {
+	font-size: 1em;
+	font-weight: 600;
+	margin-top: 2em;
+	text-transform: uppercase;
+}
+
+.clic-link {
+	text-decoration: underline;
 }
