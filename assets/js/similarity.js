@@ -105,6 +105,42 @@ function ratioLongestString(longestSize, a, b){
 	
 }
 
+// ======= Calculator Substring =======
+function generateSubstrings(seuil, textA, textB){
+	var content1 = textA;
+	var content2 = textB;
+	var ratioSubstring = round(ratioLongestString(lengthSubstring, textA, textB));
+	var index = 1;
+	var block;
+	
+	var substring = longestCommonSubstring(textA, textB);
+	var lengthSubstring = substring.length;
+	
+	while (substring.length >= seuil) {	
+		
+		if (index != 1) {
+			// Append to the body
+			block = '<hr class="hr-progress"><div class="longestSubtringsIteration"><h6><span class="sizeLongestString size">' + lengthSubstring + '</span><span class="longest-string-ratio">' + ratioSubstring + '%</span>' + index + 'ème séquence commune la plus longue :</h6><p><mark class="longestString">' + substring + '</mark></p></div>';
+
+			$('.longestSubtringsIteration').last().after(block);
+		}
+		
+		// Remove previous common substring
+		content1 = content1.replace(substring, '');
+		content2 = content2.replace(substring, '');
+		index = index + 1;
+		
+		// Re-compute the substring
+		substring = longestCommonSubstring(content1, content2);
+		
+		// Compute informations
+		lengthSubstring = substring.length;
+		ratioSubstring = round(ratioLongestString(lengthSubstring, textA, textB));
+		
+	}
+}
+
+
 // ======= Similar Text Use =======
 function similarTextRatio(a,b){
 	var distance = similarText(a,b);
@@ -161,16 +197,18 @@ function actionSimilarity(){
 	var longestCommonStringSize = longestCommonString.length;
 	var ratioLongest = ratioLongestString(longestCommonStringSize, firstArticle, secondArticle);
 	var similiRatio = similarTextRatio(firstArticle, secondArticle);
+	var jaroWinklerRatio = jaro_winkler(firstArticle, secondArticle);
 	
 	//Longest common substring
-	$("#longestString").text(longestCommonString);
-	$("#sizeLongestString").text(longestCommonStringSize);
+	$(".longestString").text(longestCommonString);
+	$(".sizeLongestString").text(longestCommonStringSize);
 	
 	// Put in pourcentage and round the number
 	indexLevenstein = round(indexLevenstein);
 	indexJaccard = round(indexJaccard);
 	ratioLongest = round(ratioLongest);
 	similiRatio = round(similiRatio);
+	indexJaroWinkler = round(jaroWinklerRatio);
 	
 	//Scroll top
 	$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -182,10 +220,18 @@ function actionSimilarity(){
 	$("#jaccard-index").text(indexJaccard);
 	$("#jaccard-progress").attr('data-value',indexJaccard);
 	
+	$("#jaroWinklerIndex").text(indexJaroWinkler);
+	$("#JaroWinklerProgress").attr('data-value',indexJaroWinkler);
+	
 	$(".longest-string-ratio").text(ratioLongest + "%");
 	
 	$("#similitude-index").text(similiRatio);
 	$("#similitude-progress").attr('data-value',similiRatio);
+	
+	// Generate substrings
+	var seuil = $('#seuil').val();
+	seuil = Number(seuil);
+	generateSubstrings(seuil, firstArticle, secondArticle);
 	
 	// Draw graph
 	traceProgresssBar();

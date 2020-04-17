@@ -239,3 +239,7 @@ td mark {
 	position: relative;
 	bottom: -0.8em;
 }
+
+.name-articles {
+	font-size: 0.7em;
+}
