@@ -108,13 +108,28 @@ function similarTextRatio(a,b){
 	return ratio;
 }
 
+function fillTable(nameDepeche, nameArticle, linkArticle, nameJournal, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize){
+	$("#tableFill1").text(nameDepeche);
+	$("#tableFill2").text(nameArticle);
+	$("#tableFill3").attr("href", linkArticle);
+	$("#tableFill4").text(nameJournal);
+	$("#tableFill5").text(dateArticle);
+	$("#tableFill6").text(indexJaccard + '%');
+	$("#tableFill7").text(indexLevenstein + '%');
+	$("#tableFill8").text(similiRatio + '%');
+	$("#tableFill9").text(ratioLongest + '%');
+	$("#tableFill10").text(longestCommonStringSize);
+}
+
 // ======= Pre-treatment =======
 function preTreatment(a) {
 	// Delete all cariage return
 	a = a.replace(/[\n\r]+/g, ' ');
-	// homogenize quote
+	// Homogenize quote
 	a = a.replace(/[»]+/g, '\"');
 	a = a.replace(/[«]+/g, '\"');
+	// To lowercase
+	a = a.toLowerCase()
 	
 	return a;
 }
@@ -123,8 +138,12 @@ function preTreatment(a) {
 // ======= Show Results =======
 
 function actionSimilarity(){
-	var firstArticle = $("#content1").val();
-	var secondArticle = $("#content2").val();
+	var nameDepeche = $("#titreAfp").val();
+	var nameArticle = $("#titreArticle").val();
+	
+	// Get content of the article and add the title
+	var firstArticle = $("#content1").val() + nameDepeche;
+	var secondArticle = $("#content2").val() + nameArticle;
 	
 	//Homogeneity
 	firstArticle = preTreatment(firstArticle);
@@ -164,6 +183,12 @@ function actionSimilarity(){
 	
 	// Draw graph
 	traceProgresssBar();
+	
+	// Fill Table
+	var linkArticle = $("#linkArticle").val();
+	var journalName = $("#journalName").val();
+	var dateArticle = $("#dateArticle").val();
+	fillTable(nameDepeche, nameArticle, linkArticle, journalName, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize);
 	
 	// Show figures
 	$('#figures').hide().slideToggle("slow");

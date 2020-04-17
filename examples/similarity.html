@@ -12,7 +12,7 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8" />
@@ -196,21 +196,21 @@ Coded by www.creative-tim.com
 								<th>Taille Max. substring</th>
 							</tr>
 							<tr>
-								<td>Coronavirus : premier décès d'un médecin hospitalier en France</td>
-								<td>Coronavirus : premier décès d'un médecin hospitalier en France</td>
-								<td><a href="https://www.lexpress.fr/actualite/societe/sante/ce-que-l-on-sait-sur-le-premier-medecin-mort-en-france-a-cause-du-coronavirus_2121601.html" class="clic-link">Clic</a></td>
-								<td>L'Express</td>
-								<td>22/03/2020</td>
-								<td><mark>100%</mark></td>
-								<td><mark>100%</mark></td>
-								<td><mark>100%</mark></td>
-								<td><mark>100%</mark></td>
-								<td><mark>2552</mark></td>
+								<td id="tableFill1">Coronavirus : premier décès d'un médecin hospitalier en France</td>
+								<td id="tableFill2">Coronavirus : premier décès d'un médecin hospitalier en France</td>
+								<td><a id="tableFill3" href="https://www.lexpress.fr/actualite/societe/sante/ce-que-l-on-sait-sur-le-premier-medecin-mort-en-france-a-cause-du-coronavirus_2121601.html" target="_blank" class="clic-link">Clic</a></td>
+								<td id="tableFill4">L'Express</td>
+								<td id="tableFill5">22/03/2020</td>
+								<td><mark id="tableFill6">100%</mark></td>
+								<td><mark id="tableFill7">100%</mark></td>
+								<td><mark id="tableFill8">100%</mark></td>
+								<td><mark id="tableFill9">100%</mark></td>
+								<td><mark id="tableFill10">2552</mark></td>
 							</tr>
 						</table>
 						
 						<div class="action-table-container">
-							<button class="btn btn-neutral btn-icon copy-button button-action" type="button">
+							<button class="btn btn-neutral btn-icon copy-button button-action" type="button" onclick="actionCopy();">
 								<span class="btn-inner--icon button-action-icon">
 									<span class="lnr lnr-select"></span>
 								</span>
@@ -266,7 +266,7 @@ Coded by www.creative-tim.com
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-link"></i></span>
 									</div>
-									<input class="form-control form-control-alternative" placeholder="Lien vers l'article" type="text" id="linkArticle">
+									<input class="form-control form-control-alternative enter-link" placeholder="Lien vers l'article" type="text" id="linkArticle">
 								</div>
 							</div>
 
@@ -337,6 +337,9 @@ Coded by www.creative-tim.com
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
 	<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+	
+	<!-- No UI scripts -->
+	<script src="../assets/js/actions.js"></script>
 	<script src="../assets/js/progress.js"></script>
 	<script src="../assets/js/longest-c-string.js"></script>
 	<script src="../assets/js/similarText.js"></script>
