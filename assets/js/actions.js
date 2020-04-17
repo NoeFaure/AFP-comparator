@@ -1,3 +1,20 @@
+function displayLogAction (status, message){
+	// 2 paramaters allowed for status : success & erros
+	if (status == 'success'){
+		$("#iconLogAction").removeClass();
+		$("#iconLogAction").addClass("has-success");
+		$("#messageLogAction").text(message);
+		$('#containerLogAction').hide().show();
+	}
+	else if(status == 'error'){
+		$("#iconLogAction").removeClass();
+		$("#iconLogAction").addClass("has-danger");
+		$("#messageLogAction").text(message);
+		$('#containerLogAction').hide().show();
+	}
+}
+
+
 function actionCopy() {
   /* Get all the data and format */
 	var i;
@@ -52,9 +69,13 @@ function actionCopy() {
             console.error("Cannot copy text");
         }else{
             console.log("The text is now on the clipboard");
-						alert("Le texte a été copié avec succès !");
+						displayLogAction("success", "Le texte a été copié avec succès !");
         }
     } catch (err) {
         console.log('Unable to copy.');
     }
+}
+
+function exportCsv() {
+	displayLogAction("error", "Cette fonction n'est pas encore disponible.");
 }

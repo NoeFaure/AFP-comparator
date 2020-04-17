@@ -217,12 +217,17 @@ Coded by www.creative-tim.com
 								<span class="nav-link-inner--text">Copier dans le presse-papier</span>
 							</button>
 							
-							<button class="btn btn-neutral btn-icon copy-button margin-left-button button-action" type="button">
+							<button class="btn btn-neutral btn-icon copy-button margin-left-button button-action" type="button" onclick="exportCsv();">
 								<span class="btn-inner--icon button-action-icon">
 									<span class="lnr lnr-file-empty"></span>
 								</span>
 								<span class="nav-link-inner--text">Télécharger au format csv</span>
 							</button>
+							
+							<div id="containerLogAction" class="log-actions">
+								<span id="iconLogAction" class="has-success"></span>
+								<p id="messageLogAction"></p>
+							</div>
 						</div>
 					<hr class="hr-progress">
 				</div>
