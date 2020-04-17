@@ -86,7 +86,13 @@ function round(number) {
 	number = number*100;
 	number= Math.round(number * 10) / 10;
 	
-	return number;
+	// Check the existance of the ratio
+	if (isNaN(number)) {
+		return(0.0);
+	}
+	else {
+		return number;
+	}
 }
 
 // ======= Ratio Longest Substring =======
