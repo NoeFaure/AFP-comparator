@@ -243,3 +243,7 @@ td mark {
 .name-articles {
 	font-size: 0.7em;
 }
+
+.valid-index {
+	background-color: #69deac99;
+}
