@@ -8,6 +8,7 @@
 	border: 0.1em dashed #e5e5e5;
 	cursor: pointer;
 	transition: 0.2s;
+	margin-bottom: 1.5em;
 }
 
 .custom-file-upload:hover {
@@ -21,4 +22,46 @@
 
 body {
     background-color: #f5f7f9;
+}
+
+/* Table */
+table {
+	width: 100%;
+	text-align: center;
+	background: white;
+	box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+	border-radius: 0.2em;
+	margin-bottom: 2em;
+	border-collapse: collapse;
+	margin-bottom: 1.5em;
+}
+
+th {
+	text-align: inherit;
+	padding: 1.2em;
+	font-size: 0.8em;
+	border-bottom: 1px solid #dcdddf;
+	text-transform: uppercase;
+}
+
+td {
+	padding: 1.2em;
+	font-size: 0.8em;
+	border-bottom: 1px solid #dcdddf;
+}
+
+.table-margin {
+	margin-top: 4em;
+}
+
+td mark {
+    padding: 0.2em 0.4em;
+}
+
+.name-articles {
+	font-size: 0.7em;
+}
+
+.clic-link {
+	text-decoration: underline;
 }

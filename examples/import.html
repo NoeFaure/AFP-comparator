@@ -135,9 +135,12 @@ Coded by www.creative-tim.com
 				
 				<label for="file-upload" class="custom-file-upload">
 					<div><span class="lnr lnr-download"></span></div>
-    			Importer un fichier
+    			Importer un fichier (.tsv)
 				</label>
 				<input id="file-upload" type="file"/>
+				
+				<table id="table-content">
+				</table>
 				
 			<footer class="main-footer"></footer>
 			</main>
@@ -163,6 +166,7 @@ Coded by www.creative-tim.com
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+	<script src="../assets/js/import.js"></script>
   <script>
     window.TrackJS &&
       TrackJS.install({

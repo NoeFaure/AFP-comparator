@@ -76,6 +76,6 @@ function actionCopy() {
     }
 }
 
-function exportCsv() {
+function exportTsv() {
 	displayLogAction("error", "Cette fonction n'est pas encore disponible.");
 }
