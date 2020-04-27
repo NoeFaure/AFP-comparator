@@ -48,7 +48,7 @@ Coded by www.creative-tim.com
 		<ul class="navbar-nav ml-lg-auto">
 				<li class="nav-item">
 						<a class="nav-link nav-link-icon" href="#">
-								<i class="ni ni-settings-gear-65"></i>
+								<i class="fas fa-question-circle"></i>
 						</a>
 				</li>
 		</ul>
@@ -59,54 +59,74 @@ Coded by www.creative-tim.com
   		<nav class="col-md-2 bg-default sidebar">
 				<div class="sidebar-sticky">
 					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					
+					<ul class="nav flex-column top-dashboard">
+						<li class="nav-item">
+							<a class="nav-link" href="accueil.html">
+								<span class="lnr lnr-home"></span>&nbsp;
+								<span>Accueil</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="import.html">
+								<span class="lnr lnr-download"></span>&nbsp;
+								<span>Importer</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link active" href="similarity.html">
+								<span class="lnr lnr-text-size"></span>&nbsp;
+								<span>Comparer</span>
+							</a>
+          	</li>
+					</ul>
+					
 					<hr class="hr-sidebar">
 					<ul class="nav flex-column top-dashboard" id="listSidebar">
 						<li class="nav-item">
-							<a class="nav-link active">
+							<a class="nav-link" href="etudes/etude1.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 1</span>
 							</a>
           	</li>
 						
 						<li class="nav-item">
-							<a class="nav-link">
+							<a class="nav-link" href="etudes/etude2.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 2</span>
 							</a>
           	</li>
 						
 						<li class="nav-item">
-							<a class="nav-link">
+							<a class="nav-link" href="etudes/etude3.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 3</span>
 							</a>
           	</li>
 						
 						<li class="nav-item">
-							<a class="nav-link">
+							<a class="nav-link" href="etudes/etude4.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 4</span>
 							</a>
           	</li>
 						
 						<li class="nav-item">
-							<a class="nav-link">
+							<a class="nav-link" href="etudes/etude5.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 5</span>
 							</a>
           	</li>
 						
 						<li class="nav-item">
-							<a class="nav-link">
+							<a class="nav-link" href="etudes/etude6.html">
 								<i class="ni ni-tag"></i>&nbsp;
 								<span>Etude 6</span>
 							</a>
           	</li>
 					</ul>
-					<a class="add-data-container" href="form.html">
-						<span class="lnr lnr-plus-circle"></span>
-						<span>Ajouter</span>
-					</a>
 					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
 				</div>
 			</nav>
@@ -184,7 +204,7 @@ Coded by www.creative-tim.com
 						</div>
 					</div>
 					
-						<table class=table-margin>
+						<table class="table-margin">
 							<tr>
 								<th>Nom de la dépêche</th>
 								<th>Nom de l'article</th>
@@ -207,9 +227,9 @@ Coded by www.creative-tim.com
 								<td><mark id="tableFill6">0%</mark></td>
 								<td><mark id="tableFill7">0%</mark></td>
 								<td><mark id="tableFill8">0%</mark></td>
-								<td><mark id="tableFill11">0%</mark></td>
 								<td><mark id="tableFill9">0%</mark></td>
-								<td><mark id="tableFill10">0</mark></td>
+								<td><mark id="tableFill10">0%</mark></td>
+								<td><mark id="tableFill11">0</mark></td>
 							</tr>
 						</table>
 						
@@ -304,7 +324,7 @@ Coded by www.creative-tim.com
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-sort-amount-up"></i></span>
 									</div>
-									<input class="form-control form-control-alternative" placeholder="Seuil de détection" type="number" id="seuil" value="50">
+									<input class="form-control form-control-alternative" placeholder="Seuil de détection" type="number" id="seuil" value="30">
 								</div>
 							</div>
 						</div>

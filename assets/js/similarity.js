@@ -76,7 +76,14 @@ function jaccard(a,b) {
   var union = a.length + b.length - intersection;
   var jacardIndex = (intersection / union)
   
-	return jacardIndex;
+	// Temporary fix
+	if (jacardIndex > 1) {
+		return 1;
+	}
+	else {
+		return jacardIndex;
+	}
+	
 }
 
 // ======= Round =======
@@ -150,7 +157,22 @@ function similarTextRatio(a,b){
 	return ratio;
 }
 
-function fillTable(nameDepeche, nameArticle, linkArticle, nameJournal, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize){
+// ======= Sum up content of same class =======
+function sumUpClass(nameClass) {
+	var sum = 0;
+	$("." + nameClass).each(function(){
+			sum += parseFloat($(this).text());
+	})
+	
+	// Round
+	sum = sum*10;
+	sum = Math.round(sum);
+	sum = sum/10;
+	
+	return sum;
+}
+
+function fillTable(nameDepeche, nameArticle, linkArticle, nameJournal, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize, indexJaroWinkler){
 	$("#tableFill1").text(nameDepeche);
 	$("#tableFill2").text(nameArticle);
 	$("#tableFill3").attr("href", linkArticle);
@@ -159,8 +181,9 @@ function fillTable(nameDepeche, nameArticle, linkArticle, nameJournal, dateArtic
 	$("#tableFill6").text(indexJaccard + '%');
 	$("#tableFill7").text(indexLevenstein + '%');
 	$("#tableFill8").text(similiRatio + '%');
-	$("#tableFill9").text(ratioLongest + '%');
-	$("#tableFill10").text(longestCommonStringSize);
+	$("#tableFill9").text(indexJaroWinkler + '%');
+	$("#tableFill10").text(sumUpClass('longest-string-ratio') + '%');
+	$("#tableFill11").text(sumUpClass('sizeLongestString'));
 }
 
 // ======= Pre-treatment =======
@@ -240,7 +263,7 @@ function actionSimilarity(){
 	var linkArticle = $("#linkArticle").val();
 	var journalName = $("#journalName").val();
 	var dateArticle = $("#dateArticle").val();
-	fillTable(nameDepeche, nameArticle, linkArticle, journalName, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize);
+	fillTable(nameDepeche, nameArticle, linkArticle, journalName, dateArticle, indexJaccard, indexLevenstein, similiRatio, ratioLongest, longestCommonStringSize, indexJaroWinkler);
 	
 	// Show figures
 	$('#figures').hide().slideToggle("slow");

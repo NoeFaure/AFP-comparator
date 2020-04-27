@@ -18,7 +18,7 @@ function displayLogAction (status, message){
 function actionCopy() {
   /* Get all the data and format */
 	var i;
-	var tableSize = 10
+	var tableSize = 11;
 	var copyText = "";
 	var id;
 	for (i = 1; i <= tableSize; i++) {

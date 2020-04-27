@@ -1,0 +1,211 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    AFP - Comparator
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Linear Icons --->
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <!-- CSS Files -->
+  <link href="../../assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<link href="../../assets/css/dashboard.css" rel="stylesheet" />
+	<link href="../../assets/css/similarity.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top bg-primary flex-md-nowrap p-0">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AFP <span class="comparator">Comparator</span></a>
+		<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+						<a class="nav-link nav-link-icon" href="#">
+								<i class="ni ni-settings-gear-65"></i>
+						</a>
+				</li>
+		</ul>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row">
+  		<nav class="col-md-2 bg-default sidebar">
+				<div class="sidebar-sticky">
+					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					
+					<ul class="nav flex-column top-dashboard">
+						<li class="nav-item">
+							<a class="nav-link" href="../accueil.html">
+								<span class="lnr lnr-home"></span>&nbsp;
+								<span>Accueil</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../import.html">
+								<span class="lnr lnr-download"></span>&nbsp;
+								<span>Importer</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../similarity.html">
+								<span class="lnr lnr-text-size"></span>&nbsp;
+								<span>Comparer</span>
+							</a>
+          	</li>
+					</ul>
+					
+					
+					<hr class="hr-sidebar">
+					<ul class="nav flex-column top-dashboard" id="listSidebar">
+						<li class="nav-item">
+							<a class="nav-link active" href="etude1.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 1</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude2.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 2</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude3.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 3</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude4.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 4</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude5.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 5</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude6.html">
+								<i class="ni ni-tag"></i>&nbsp;
+								<span>Etude 6</span>
+							</a>
+          	</li>
+					</ul>
+					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 top-dashboard">
+					<div class="ct-page-title" style="display: flex;">
+						<h1 class="ct-title" id="content">Cette étude n'est pas terminée</h1>
+					</div>
+				<hr>
+				
+						<table class="table-margin">
+							<tr>
+								<th>Nom de la dépêche</th>
+								<th>Nom de l'article</th>
+								<th>Lien</th>
+								<th>Journal</th>
+								<th>Date</th>
+								<th>Jaccard</th>
+								<th>Levenshtein</th>
+								<th>Similitude</th>
+								<th>Jaro Winkler</th>
+								<th>% Tot. substrings</th>
+								<th>Taille Tot. substrings</th>
+							</tr>
+							<tr>
+								<td class="name-articles"></td>
+								<td class="name-articles"></td>
+								<td><a href="#" target="_blank" class="clic-link">Clic</a></td>
+								<td></td>
+								<td></td>
+								<td><mark>0%</mark></td>
+								<td><mark>0%</mark></td>
+								<td><mark>0%</mark></td>
+								<td><mark>0%</mark></td>
+								<td><mark>0%</mark></td>
+								<td><mark>0</mark></td>
+							</tr>
+						</table>
+				
+			<footer class="main-footer"></footer>
+			</main>
+		</div>
+  </div>
+	
+	
+	
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/moment.min.js"></script>
+  <script src="../../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#searchSidebar").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#listSidebar li").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

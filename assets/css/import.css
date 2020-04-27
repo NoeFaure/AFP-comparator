@@ -1,0 +1,24 @@
+.custom-file-upload {
+	width: 100%;
+	font-size: 2em;
+	text-align: center;
+	height: 10em;
+	padding: 3em;
+	border-radius: 0.5em;
+	border: 0.1em dashed #e5e5e5;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.custom-file-upload:hover {
+	border: 0.1em dashed #5e72e4;
+	color: #5e72e4;
+}
+
+#file-upload {
+	display: none;
+}
+
+body {
+    background-color: #f5f7f9;
+}
