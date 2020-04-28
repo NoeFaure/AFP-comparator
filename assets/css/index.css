@@ -121,3 +121,11 @@ mark {
 .modify-icon:active {
 	background-color: #f1eeee;
 }
+
+.warning-writing {
+	width: 100%;
+	padding: 1em;
+	border-radius: .2em;
+	background-color: #ffc1077d;
+	margin-bottom: 1em;
+}
