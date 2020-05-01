@@ -43,6 +43,9 @@ function createTable(CSVARRAY) {
 							else if (indexColumn == 3){
 								content += "<td><a href=\"#\" target=\"_blank\" class=\"clic-link\">" + cell + "</a></td>"; 
 							}
+							else if (indexColumn == 10 || indexColumn == 11) {
+								content += "<td><mark class=\"valid-index\">" + cell + "</mark></td>" ;
+							}
 							else if (indexColumn > 5 && !!cell) {
 								content += "<td><mark>" + cell + "</mark></td>" ;
 							}
