@@ -9,3 +9,7 @@ tr:nth-child(even) {
 td {
 	border-bottom: 1px solid #dcdddf;
 }
+
+table {
+	margin-top: 5em;
+}
