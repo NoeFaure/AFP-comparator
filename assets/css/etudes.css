@@ -13,3 +13,37 @@ td {
 table {
 	margin-top: 5em;
 }
+
+.puce-plus {
+	background-color: #a6ebcd;
+	padding: 0.5em;
+	border-radius: 50%;
+	font-weight: bolder;
+	margin-right: 0.5em;
+	font-size: 0.7em;
+}
+
+.puce-moins {
+	background-color: #fbe5af;
+	padding: 0.5em;
+	border-radius: 50%;
+	font-weight: bolder;
+	margin-right: 0.5em;
+	font-size: 0.7em;
+}
+
+.list-criterion {
+	list-style-type: none;
+	margin-left: 0;
+	padding: 0;
+}
+
+.list-criterion li {
+	margin-bottom: 1em;
+	font-weight: 100;
+	font-size: 1rem;
+}
+
+.font-list {
+	font-weight: 600;
+}
