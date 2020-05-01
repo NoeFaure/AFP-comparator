@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    AFP - Comparator
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Linear Icons --->
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <!-- CSS Files -->
+  <link href="../../assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<link href="../../assets/css/dashboard.css" rel="stylesheet" />
+	<link href="../../assets/css/similarity.css" rel="stylesheet" />
+	<link href="../../assets/css/etudes.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top bg-primary flex-md-nowrap p-0">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AFP <span class="comparator">Comparator</span></a>
+		<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+						<a class="nav-link nav-link-icon" href="#">
+								<i class="ni ni-settings-gear-65"></i>
+						</a>
+				</li>
+		</ul>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row">
+  		<nav class="col-md-2 bg-default sidebar">
+				<div class="sidebar-sticky">
+					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					
+					<ul class="nav flex-column top-dashboard">
+						<li class="nav-item">
+							<a class="nav-link" href="../../index.html">
+								<span class="lnr lnr-home"></span>&nbsp;
+								<span>Accueil</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../import.html">
+								<span class="lnr lnr-download"></span>&nbsp;
+								<span>Importer</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../similarity.html">
+								<span class="lnr lnr-text-size"></span>&nbsp;
+								<span>Comparer</span>
+							</a>
+          	</li>
+					</ul>
+					
+					
+					<hr class="hr-sidebar">
+					<ul class="nav flex-column top-dashboard" id="listSidebar">
+						<li class="nav-item">
+							<a class="nav-link" href="etude1.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 1</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link active" href="etude2.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 2</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude3.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 3</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude4.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 4</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude5.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 5</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude6.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 6</span>
+							</a>
+          	</li>
+					</ul>
+					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 top-dashboard">
+					<div class="ct-page-title" style="display: flex;">
+						<h1 class="ct-title" id="content">Etude 2 - Donald Trump suspend la contribution américaine à l'OMS</h1>
+					</div>
+				<hr>
+				<div class="warning-writing"><span class="lnr lnr-warning"></span>&nbsp;En cours de rédaction</div>
+				<table id="table-content">
+					 <tbody>
+							<tr>
+								 <th>NOM DE LA DÉPÊCHE</th>
+								 <th>NOM DE L'ARTICLE</th>
+								 <th>LIEN</th>
+								 <th>JOURNAL</th>
+								 <th>DATE</th>
+								 <th>JACCARD</th>
+								 <th>LEVENSHTEIN</th>
+								 <th>SIMILITUDE</th>
+								 <th>JARO WINKLER</th>
+								 <th>% TOT. SUBSTRINGS</th>
+								 <th>TAILLE TOT. SUBSTRINGS</th>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.lefigaro.fr/flash-eco/trump-suspend-la-contribution-americaine-a-l-oms-20200415" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Figaro</td>
+								 <td>15/04/2020</td>
+								 <td><mark>53.3%</mark></td>
+								 <td><mark>36.8%</mark></td>
+								 <td><mark>31.8%</mark></td>
+								 <td><mark>82.2%</mark></td>
+								 <td><mark class="valid-index">42%</mark></td>
+								 <td><mark class="valid-index">1302
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend la contribution américaine à l’OMS</td>
+								 <td><a href="https://www.lemonde.fr/international/article/2020/04/15/coronavirus-donald-trump-suspend-le-contribution-americaine-a-l-oms_6036604_3210.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Monde</td>
+								 <td>15/04/2020</td>
+								 <td><mark>43.1%</mark></td>
+								 <td><mark>32.5%</mark></td>
+								 <td><mark>17.1%</mark></td>
+								 <td><mark>81.6%</mark></td>
+								 <td><mark class="valid-index">14.4%</mark></td>
+								 <td><mark class="valid-index">393
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l’OMS</td>
+								 <td><a href="https://www.lavoixdunord.fr/740966/article/2020-04-15/trump-suspend-la-contribution-americaine-l-oms" target="_blank" class="clic-link">Clic</a></td>
+								 <td>La Voix Du Nord</td>
+								 <td>15/04/2020</td>
+								 <td><mark>52.8%</mark></td>
+								 <td><mark>36.9%</mark></td>
+								 <td><mark>30.9%</mark></td>
+								 <td><mark>76.8%</mark></td>
+								 <td><mark class="valid-index">51%</mark></td>
+								 <td><mark class="valid-index">1085
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">En pleine pandémie, Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.parismatch.com/Actu/International/En-pleine-pandemie-Donald-Trump-suspend-la-contribution-americaine-a-l-OMS-1682105" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Paris Match</td>
+								 <td>15/04/2020</td>
+								 <td><mark>41%</mark></td>
+								 <td><mark>27%</mark></td>
+								 <td><mark>1.6%</mark></td>
+								 <td><mark>93.5%</mark></td>
+								 <td><mark class="valid-index">3.5%</mark></td>
+								 <td><mark class="valid-index">158
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.lexpress.fr/actualite/monde/amerique-nord/coronavirus-donald-trump-suspend-la-contribution-americaine-a-l-oms_2123719.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>L'Express</td>
+								 <td>15/04/2020</td>
+								 <td><mark>44.1%</mark></td>
+								 <td><mark>38.9%</mark></td>
+								 <td><mark>32.9%</mark></td>
+								 <td><mark>90.8%</mark></td>
+								 <td><mark class="valid-index">30.5%</mark></td>
+								 <td><mark class="valid-index">1307
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">OMS : Donald Trump met sa menace à exécution et suspend la contribution américaine</td>
+								 <td><a href="https://www.la-croix.com/Monde/Trump-veut-prendre-main-deconfinement-risque-clash-2020-04-14-1301089357" target="_blank" class="clic-link">Clic</a></td>
+								 <td>La Croix</td>
+								 <td>14/04/2020</td>
+								 <td><mark>51.7%</mark></td>
+								 <td><mark>30%</mark></td>
+								 <td><mark>39.7%</mark></td>
+								 <td><mark>82.8%</mark></td>
+								 <td><mark class="valid-index">45.4%</mark></td>
+								 <td><mark class="valid-index">1281
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">En pleine pandémie, Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.lci.fr/international/en-pleine-pandemie-donald-trump-suspend-la-contribution-americaine-a-l-oms-2151042.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>LCI</td>
+								 <td>15/04/2020</td>
+								 <td><mark>49.8%</mark></td>
+								 <td><mark>32.6%</mark></td>
+								 <td><mark>31.5%</mark></td>
+								 <td><mark>84.6%</mark></td>
+								 <td><mark class="valid-index">30.6%</mark></td>
+								 <td><mark class="valid-index">992
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend le financement américain de l'OMS</td>
+								 <td><a href="https://www.20minutes.fr/monde/2760847-20200415-coronavirus-donald-trump-suspend-financement-americain-oms" target="_blank" class="clic-link">Clic</a></td>
+								 <td>20 minutes</td>
+								 <td>15/04/2020</td>
+								 <td><mark>60.1%</mark></td>
+								 <td><mark>39.5%</mark></td>
+								 <td><mark>51.8%</mark></td>
+								 <td><mark>86.6%</mark></td>
+								 <td><mark class="valid-index">57.1%</mark></td>
+								 <td><mark class="valid-index">1915
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.europe1.fr/international/coronavirus-donald-trump-suspend-la-contribution-americaine-a-loms-3961999" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Europe 1</td>
+								 <td>15/04/2020</td>
+								 <td><mark>85.7%</mark></td>
+								 <td><mark>64.5%</mark></td>
+								 <td><mark>79.3%</mark></td>
+								 <td><mark>95.8%</mark></td>
+								 <td><mark class="valid-index">77.2%</mark></td>
+								 <td><mark class="valid-index">3429
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.lepoint.fr/monde/coronavirus-trump-suspend-la-contribution-americaine-a-l-oms-15-04-2020-2371460_24.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Point</td>
+								 <td>15/04/2020</td>
+								 <td><mark>42%</mark></td>
+								 <td><mark>38%</mark></td>
+								 <td><mark>26.6%</mark></td>
+								 <td><mark>91%</mark></td>
+								 <td><mark class="valid-index">24.6%</mark></td>
+								 <td><mark class="valid-index">856
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.lesechos.fr/monde/etats-unis/coronavirus-donald-trump-suspend-la-contribution-americaine-a-loms-1194867" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Les Echos</td>
+								 <td>15/04/2020</td>
+								 <td><mark>43.9%</mark></td>
+								 <td><mark>31%</mark></td>
+								 <td><mark>26.5%</mark></td>
+								 <td><mark>91.6%</mark></td>
+								 <td><mark class="valid-index">16.2%</mark></td>
+								 <td><mark class="valid-index">566
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Covid-19 : Donald Trump suspend la contribution des États-Unis à l'OMS</td>
+								 <td><a href="https://www.france24.com/fr/20200414-covid-19-donald-trump-suspend-la-contribution-des-%C3%A9tats-unis-%C3%A0-l-oms" target="_blank" class="clic-link">Clic</a></td>
+								 <td>France 24</td>
+								 <td>15/04/2020</td>
+								 <td><mark>64.4%</mark></td>
+								 <td><mark>38.8%</mark></td>
+								 <td><mark>52.4%</mark></td>
+								 <td><mark>95.5%</mark></td>
+								 <td><mark class="valid-index">53.3%</mark></td>
+								 <td><mark class="valid-index">2371
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l’OMS</td>
+								 <td><a href="https://www.liberation.fr/direct/element/donald-trump-suspend-la-contribution-americaine-a-loms_112299/" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Libération</td>
+								 <td>15/04/0202</td>
+								 <td><mark>47%</mark></td>
+								 <td><mark>22.1%</mark></td>
+								 <td><mark>14.6%</mark></td>
+								 <td><mark>72.3%</mark></td>
+								 <td><mark class="valid-index">15.1%</mark></td>
+								 <td><mark class="valid-index">213
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">États-Unis. Déjà 26 000 morts du coronavirus, mais Trump suspend la contribution américaine à l’OMS</td>
+								 <td><a href="https://www.ouest-france.fr/monde/etats-unis/donald-trump/etats-unis-deja-26-000-morts-du-coronavirus-mais-trump-suspend-la-contribution-americaine-l-oms-6808385" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Ouest France</td>
+								 <td>15/04/2020</td>
+								 <td><mark>42.1%</mark></td>
+								 <td><mark>35%</mark></td>
+								 <td><mark>26.7%</mark></td>
+								 <td><mark>94%</mark></td>
+								 <td><mark class="valid-index">25.1%</mark></td>
+								 <td><mark class="valid-index">1065
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Etats-Unis : Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.midilibre.fr/2020/04/15/etats-unis-donald-trump-suspend-la-contribution-americaine-a-loms,8847356.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Midi Libre</td>
+								 <td>15/04/2020</td>
+								 <td><mark>44.2%</mark></td>
+								 <td><mark>20.7%</mark></td>
+								 <td><mark>10.6%</mark></td>
+								 <td><mark>67.6%</mark></td>
+								 <td><mark class="valid-index">14.1%</mark></td>
+								 <td><mark class="valid-index">169
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus : Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.laprovence.com/actu/en-direct/5961604/coronavirus-donald-trump-suspend-la-contribution-americaine-a-loms.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>La Provence</td>
+								 <td>15/04/2020</td>
+								 <td><mark>64%</mark></td>
+								 <td><mark>38.7%</mark></td>
+								 <td><mark>31.6%</mark></td>
+								 <td><mark>84.4%</mark></td>
+								 <td><mark class="valid-index">64.1%</mark></td>
+								 <td><mark class="valid-index">1327
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus: Donald Trump suspend la contribution américaine à l’OMS</td>
+								 <td><a href="https://www.courrier-picard.fr/id81015/article/2020-04-15/coronavirus-donald-trump-suspend-la-contribution-americaine-loms" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Courrier Picard</td>
+								 <td>15/04/2020</td>
+								 <td><mark>54.5%</mark></td>
+								 <td><mark>26.4%</mark></td>
+								 <td><mark>29.4%</mark></td>
+								 <td><mark>84.8%</mark></td>
+								 <td><mark class="valid-index">54.4%</mark></td>
+								 <td><mark class="valid-index">980
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Trump suspend la contribution américaine à l'OMS</td>
+								 <td><a href="https://www.sciencesetavenir.fr/sante/trump-suspend-la-contribution-americaine-a-l-oms_143496" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Sciences et Avenir</td>
+								 <td>15/04/2020</td>
+								 <td><mark>65.1%</mark></td>
+								 <td><mark>38.7%</mark></td>
+								 <td><mark>31.4%</mark></td>
+								 <td><mark>84.2%</mark></td>
+								 <td><mark class="valid-index">64.8%</mark></td>
+								 <td><mark class="valid-index">1325
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Trump suspend les versements américains à l'OMS pour sa "mauvaise gestion" du coronavirus</td>
+								 <td><a href="https://www.huffingtonpost.fr/entry/trump-suspend-les-versements-americains-a-loms-pour-sa-mauvaise-gestion-du-coronavirus_fr_5e963e1fc5b6ead140044248" target="_blank" class="clic-link">Clic</a></td>
+								 <td>The Huffington Post</td>
+								 <td>15/04/2020</td>
+								 <td><mark>43.3%</mark></td>
+								 <td><mark>32.7%</mark></td>
+								 <td><mark>30.4%</mark></td>
+								 <td><mark>96%</mark></td>
+								 <td><mark class="valid-index">22.7%</mark></td>
+								 <td><mark class="valid-index">1007
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Covid-19.Trump coupe les vivres à l’OMS, l’accusant d’être responsable de la crise</td>
+								 <td><a href="https://www.courrierinternational.com/revue-de-presse/covid-19-trump-coupe-les-vivres-loms-laccusant-detre-responsable-de-la-crise" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Courrier International</td>
+								 <td>15/04/2020</td>
+								 <td><mark>34.6%</mark></td>
+								 <td><mark>30.1%</mark></td>
+								 <td><mark>17.1%</mark></td>
+								 <td><mark>89.8%</mark></td>
+								 <td><mark class="valid-index">4.7%</mark></td>
+								 <td><mark class="valid-index">175
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Trump suspend la contribution à l’OMS</td>
+								 <td><a href="https://www.ladepeche.fr/2020/04/15/trump-suspend-la-contribution-a-loms,8847283.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>La Dépêche du midi</td>
+								 <td>15/04/2020</td>
+								 <td><mark>49.1%</mark></td>
+								 <td><mark>36.1%</mark></td>
+								 <td><mark>27.8%</mark></td>
+								 <td><mark>85.5%</mark></td>
+								 <td><mark class="valid-index">48.9%</mark></td>
+								 <td><mark class="valid-index">962
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">Donald Trump suspend la contribution américaine à l'OMS</td>
+								 <td class="name-articles">Coronavirus: Trump suspend la contribution américaine à l'OMS pour "mauvaise gestion"</td>
+								 <td><a href="https://rmc.bfmtv.com/emission/coronavirus-trump-suspend-la-contribution-americaine-a-l-oms-pour-mauvaise-gestion-1893110.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>BFM TV</td>
+								 <td>15/04/2020</td>
+								 <td><mark>57.6%</mark></td>
+								 <td><mark>35.4%</mark></td>
+								 <td><mark>33.6%</mark></td>
+								 <td><mark>80.3%</mark></td>
+								 <td><mark class="valid-index">47.4%</mark></td>
+								 <td><mark class="valid-index">1324</mark></td>
+							</tr>
+					 </tbody>
+				</table>
+	
+	
+	
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/moment.min.js"></script>
+  <script src="../../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#searchSidebar").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#listSidebar li").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

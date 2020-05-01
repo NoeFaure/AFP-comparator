@@ -16,8 +16,10 @@
 
 .article-text {
 	text-align: justify;
-  max-width: 100%;
+	max-width: 100%;
 	font-size: 1.1em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .other-newspaper-title {
@@ -128,4 +130,9 @@ mark {
 	border-radius: .2em;
 	background-color: #ffc1077d;
 	margin-bottom: 1em;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
 }
