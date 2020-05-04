@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    AFP - Comparator
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Linear Icons --->
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <!-- CSS Files -->
+  <link href="../../assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<link href="../../assets/css/dashboard.css" rel="stylesheet" />
+	<link href="../../assets/css/similarity.css" rel="stylesheet" />
+	<link href="../../assets/css/etudes.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top bg-primary flex-md-nowrap p-0">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AFP <span class="comparator">Comparator</span></a>
+		<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+						<a class="nav-link nav-link-icon" href="#">
+								<i class="ni ni-settings-gear-65"></i>
+						</a>
+				</li>
+		</ul>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row">
+  		<nav class="col-md-2 bg-default sidebar">
+				<div class="sidebar-sticky">
+					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					
+					<ul class="nav flex-column top-dashboard">
+						<li class="nav-item">
+							<a class="nav-link" href="../../index.html">
+								<span class="lnr lnr-home"></span>&nbsp;
+								<span>Accueil</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../import.html">
+								<span class="lnr lnr-download"></span>&nbsp;
+								<span>Importer</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../similarity.html">
+								<span class="lnr lnr-text-size"></span>&nbsp;
+								<span>Comparer</span>
+							</a>
+          	</li>
+					</ul>
+					
+					
+					<hr class="hr-sidebar">
+					<ul class="nav flex-column top-dashboard" id="listSidebar">
+						<li class="nav-item">
+							<a class="nav-link active" href="temoin.html">
+								<span class="lnr lnr-bookmark"></span>&nbsp;
+								<span>Etude Témoin</span>
+							</a>
+          	</li>
+						<li class="nav-item">
+							<a class="nav-link" href="etude1.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 1</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude2.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 2</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude3.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 3</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude4.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 4</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude5.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 5</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude6.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 6</span>
+							</a>
+          	</li>
+					</ul>
+					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 top-dashboard">
+					<div class="ct-page-title" style="display: flex;">
+						<h1 class="ct-title" id="content">Etude Témoin - Mesure de la pertinence des indicateurs utilisés</h1>
+					</div>
+				<hr>
+				<h5>Analyse de l'étude témoin</h5>
+				<p class="article-text">Dans cette étude témoin nous avons comparé un article du 13 novembre 2016 publié par Europe 1 à un ensemble d’autres choisis volontairement pour ne pas avoir de rapport entre eux. L’analyse d’un échantillon incohérent va nous permettre d’évaluer la performance de nos indicateurs de similarité.</p>
+				<table id="table-content">
+					 <tbody>
+							<tr>
+								 <th>Nom de l'article AFP</th>
+								 <th>Nom de l'article</th>
+								 <th>Lien</th>
+								 <th>Journal</th>
+								 <th>Date</th>
+								 <th>% Jaccard</th>
+								 <th>% Lenvenshtein</th>
+								 <th>Similar text</th>
+								 <th>Jaro Winkler</th>
+								 <th>% TOT. SUBSTRINGS</th>
+								 <th>TAILLE TOT. SUBSTRINGS</th>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td><a href="https://www.europe1.fr/emissions/les-sorties-du-week-end/a-la-chasse-aux-truffes-2898764" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Europe 1</td>
+								 <td>13/11/2016</td>
+								 <td><mark>100,00%</mark></td>
+								 <td><mark>100,00%</mark></td>
+								 <td><mark>100,00%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>100,00%</mark></td>
+								 <td><mark class="valid-index">3581
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Le silence de l’ONU face aux bombardements russes en Syrie</td>
+								 <td><a href="https://www.lemonde.fr/international/article/2020/04/10/le-silence-de-l-onu-face-aux-bombardements-russes-en-syrie_6036257_3210.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Monde</td>
+								 <td>10/04/2020</td>
+								 <td><mark>27,50%</mark></td>
+								 <td><mark>24,40%</mark></td>
+								 <td><mark>13,70%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,50%</mark></td>
+								 <td><mark class="valid-index">17
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Stefan Zweig ou l’horreur de la politique</td>
+								 <td><a href="https://www.monde-diplomatique.fr/2020/04/BURLAUD/61598" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Monde Diplomatique</td>
+								 <td>09/04/2020</td>
+								 <td><mark>29,40%</mark></td>
+								 <td><mark>25,10%</mark></td>
+								 <td><mark>16,60%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,60%</mark></td>
+								 <td><mark class="valid-index">19
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Civilization VI : Une adaptation solide sur PS4 et Xbox One</td>
+								 <td><a href="http://www.jeuxvideo.com/test/1149878/civilization-vi-une-adaptation-solide-sur-ps4-et-xbox-one.htm" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Jeuxvideo.com</td>
+								 <td>25/11/2019</td>
+								 <td><mark>43,10%</mark></td>
+								 <td><mark>19,70%</mark></td>
+								 <td><mark>8,10%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,50%</mark></td>
+								 <td><mark class="valid-index">18
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Emma Roberts : "Vieillir est une belle chose qui ne me fait pas peur"</td>
+								 <td><a href="https://www.marieclaire.fr/interview-beaute-emma-roberts,1341107.asp" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Marie Claire</td>
+								 <td>30/03/2020</td>
+								 <td><mark>33,70%</mark></td>
+								 <td><mark>27,80%</mark></td>
+								 <td><mark>8,90%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,70%</mark></td>
+								 <td><mark class="valid-index">19
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Ségolène Royal dit avoir compris ses erreurs</td>
+								 <td><a href="https://www.franceinter.fr/politique/segolene-royal-dit-avoir-compris-ses-erreurs" target="_blank" class="clic-link">Clic</a></td>
+								 <td>France Inter</td>
+								 <td>26/06/2011</td>
+								 <td><mark>27,40%</mark></td>
+								 <td><mark>25,60%</mark></td>
+								 <td><mark>10,10%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,50%</mark></td>
+								 <td><mark class="valid-index">16
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">J'accuse… !</td>
+								 <td><a href="http://www.lapres.net/zola.pdf" target="_blank" class="clic-link">Clic</a></td>
+								 <td>L'Aurore</td>
+								 <td>13/01/1898</td>
+								 <td><mark>57,60%</mark></td>
+								 <td><mark>11,00%</mark></td>
+								 <td><mark>3,70%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">15
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Le SUV à hydrogène qui purifie l’air Hyundai NEXO</td>
+								 <td><a href="https://www.auto-moto.com/essais/suv-a-hydrogene-purificateur-air-hyundai-nexo-essai-pov-auto-moto-com-236214.html#item=1" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Auto Moto</td>
+								 <td>27/03/2020</td>
+								 <td><mark>27,50%</mark></td>
+								 <td><mark>27,30%</mark></td>
+								 <td><mark>6,50%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">15
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">L'art de faire des pâtes fraîches</td>
+								 <td><a href="https://www.marmiton.org/gestes-et-tours-de-mains/faire-des-pates-fraiches-s3006377.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Marmiton</td>
+								 <td>12/02/2019</td>
+								 <td><mark>34,20%</mark></td>
+								 <td><mark>28,60%</mark></td>
+								 <td><mark>12,90%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">16
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Arthur Chevallier – Napoléon, le plus grand des confinés</td>
+								 <td><a href="https://www.lepoint.fr/invites-du-point/arthur-chevallier-napoleon-le-plus-grand-des-confines-13-04-2020-2371250_420.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Le Point</td>
+								 <td>13/04/2020</td>
+								 <td><mark>33,40%</mark></td>
+								 <td><mark>26,40%</mark></td>
+								 <td><mark>7,60%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">13
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Le Cac 40 recule de plus de 1%, l’espoir de déconfinement s’estompe</td>
+								 <td><a href="https://investir.lesechos.fr/marches/actualites/le-cac-40-recule-de-plus-de-1-l-espoir-de-deconfinement-s-estompe-1903829.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Les Echos</td>
+								 <td>08/04/2020</td>
+								 <td><mark>29,20%</mark></td>
+								 <td><mark>26,40%</mark></td>
+								 <td><mark>13,70%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,30%</mark></td>
+								 <td><mark class="valid-index">11
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Film noir</td>
+								 <td><a href="https://fr.wikipedia.org/wiki/Film_noir" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Wikipédia</td>
+								 <td>29/03/2020</td>
+								 <td><mark>33,50%</mark></td>
+								 <td><mark>25,00%</mark></td>
+								 <td><mark>7%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">16
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">"Un peuple prêt à sacrifier un peu de liberté pour un peu de sécurité..." : Benjamin Franklin a-t-il vraiment dit ça?</td>
+								 <td><a href="https://www.lesinrocks.com/2015/11/19/actualite/actualite/un-peuple-pret-a-sacrifier-un-peu-de-liberte-pour-un-peu-de-securite-benjamin-franklin-a-t-il-vraiment-dit-ca" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Les Inrocks</td>
+								 <td>19/11/2015</td>
+								 <td><mark>24,50%</mark></td>
+								 <td><mark>27,00%</mark></td>
+								 <td><mark>14,60%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0.3%</mark></td>
+								 <td><mark class="valid-index">11
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">La mission lunaire américaine a son budget</td>
+								 <td><a href="https://www.europe1.fr/emissions/les-sorties-du-week-end/a-la-chasse-aux-truffes-2898764" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Science&amp;vie</td>
+								 <td>13/04/2020</td>
+								 <td><mark>33.5%</mark></td>
+								 <td><mark>24.2%</mark></td>
+								 <td><mark>9,20%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0.3%</mark></td>
+								 <td><mark class="valid-index">11
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Les déplacements autorisés pour l'adoption d'animaux domestiques</td>
+								 <td><a href="https://www.aufeminin.com/news-societe/les-deplacements-autorises-pour-l-adoption-d-animaux-domestiques-s4011137.html" target="_blank" class="clic-link">Clic</a></td>
+								 <td>AuFéminin</td>
+								 <td>12/04/2020</td>
+								 <td><mark>29,60%</mark></td>
+								 <td><mark>27,80%</mark></td>
+								 <td><mark>18,10%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,40%</mark></td>
+								 <td><mark class="valid-index">11
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Doug Sanders est mort</td>
+								 <td><a href="https://www.lequipe.fr/Golf/Actualites/Doug-sanders-est-mort/1126953" target="_blank" class="clic-link">Clic</a></td>
+								 <td>L'Équipe</td>
+								 <td>13/04/2020</td>
+								 <td><mark>37,40%</mark></td>
+								 <td><mark>24,70%</mark></td>
+								 <td><mark>11,50%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0.9%</mark></td>
+								 <td><mark class="valid-index">15
+										</mark>
+								 </td>
+							</tr>
+							<tr>
+								 <td class="name-articles">A la chasse aux truffes</td>
+								 <td class="name-articles">Le recueil comme genre</td>
+								 <td><a href="https://www.fabula.org/acta/document10679.php" target="_blank" class="clic-link">Clic</a></td>
+								 <td>Fabula</td>
+								 <td>24/04/2001</td>
+								 <td><mark>43,10%</mark></td>
+								 <td><mark>19,70%</mark></td>
+								 <td><mark>7,60%</mark></td>
+								 <td><mark>✕</mark></td>
+								 <td><mark>0,50%</mark></td>
+								 <td><mark class="valid-index">17</mark></td>
+							</tr>
+					 </tbody>
+				</table>
+			<footer class="main-footer"></footer>
+			</main>
+		</div>
+  </div>
+	
+	
+	
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/moment.min.js"></script>
+  <script src="../../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#searchSidebar").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#listSidebar li").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
