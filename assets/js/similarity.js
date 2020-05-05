@@ -193,6 +193,10 @@ function preTreatment(a) {
 	// Homogenize quote
 	a = a.replace(/[»]+/g, '\"');
 	a = a.replace(/[«]+/g, '\"');
+	a = a.replace(/[’]+/g, '\'');
+	a = a.replace(/[‘]+/g, '\'');
+	a = a.replace(/[“]+/g, '\"');
+	a = a.replace(/[”]+/g, '\"');
 	// To lowercase
 	a = a.toLowerCase()
 	

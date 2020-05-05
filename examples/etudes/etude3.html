@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    AFP - Comparator
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Linear Icons --->
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <!-- CSS Files -->
+  <link href="../../assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+	<link href="../../assets/css/index.css" rel="stylesheet" />
+	<link href="../../assets/css/dashboard.css" rel="stylesheet" />
+	<link href="../../assets/css/similarity.css" rel="stylesheet" />
+	<link href="../../assets/css/etudes.css" rel="stylesheet" />
+</head>
+
+<body>
+	<nav class="navbar fixed-top bg-primary flex-md-nowrap p-0">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AFP <span class="comparator">Comparator</span></a>
+		<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item">
+						<a class="nav-link nav-link-icon" href="#">
+								<i class="ni ni-settings-gear-65"></i>
+						</a>
+				</li>
+		</ul>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row">
+  		<nav class="col-md-2 bg-default sidebar">
+				<div class="sidebar-sticky">
+					<input class="form-control search" id="searchSidebar" type="text" placeholder="Rechercher">
+					
+					<ul class="nav flex-column top-dashboard">
+						<li class="nav-item">
+							<a class="nav-link" href="../../index.html">
+								<span class="lnr lnr-home"></span>&nbsp;
+								<span>Accueil</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../import.html">
+								<span class="lnr lnr-download"></span>&nbsp;
+								<span>Importer</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="../similarity.html">
+								<span class="lnr lnr-text-size"></span>&nbsp;
+								<span>Comparer</span>
+							</a>
+          	</li>
+					</ul>
+					
+					
+					<hr class="hr-sidebar">
+					<ul class="nav flex-column top-dashboard" id="listSidebar">
+						<li class="nav-item">
+							<a class="nav-link" href="temoin.html">
+								<span class="lnr lnr-bookmark"></span>&nbsp;
+								<span>Etude Témoin</span>
+							</a>
+          	</li>
+						<li class="nav-item">
+							<a class="nav-link" href="etude1.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 1</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude2.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 2</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link active" href="etude3.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 3</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude4.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 4</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude5.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 5</span>
+							</a>
+          	</li>
+						
+						<li class="nav-item">
+							<a class="nav-link" href="etude6.html">
+								<span class="lnr lnr-tag"></span>&nbsp;
+								<span>Etude 6</span>
+							</a>
+          	</li>
+					</ul>
+					<footer class="footer-sidebar">Made by Noé Faure - 2020</footer>
+				</div>
+			</nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 top-dashboard">
+					<div class="ct-page-title" style="display: flex;">
+						<h1 class="ct-title" id="content">Etude 3 - Retraits massifs dans les banques grecques en 2012</h1>
+					</div>
+				<hr>
+				<h5>Analyse de l'étude</h5>
+				<p class="article-text">Notre Troisième étude.</p>
+				
+				<h5 class="title-table">Résultat de la comparaison à la dépêche de l'AFP</h5>
+				<table id="table-content">
+				 <tbody>
+						<tr>
+							 <th>NOM DE LA DÉPÊCHE</th>
+							 <th>NOM DE L'ARTICLE</th>
+							 <th>LIEN</th>
+							 <th>JOURNAL</th>
+							 <th>DATE</th>
+							 <th>JACCARD</th>
+							 <th>LEVENSHTEIN</th>
+							 <th>SIMILAR TEXT</th>
+							 <th>JARO WINKLER</th>
+							 <th>% TOT. SUBSTRINGS</th>
+							 <th>TAILLE TOT. SUBSTRINGS</th>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">700 millions d'euros retirés des banques grecques lundi</td>
+							 <td><a href="https://www.lesechos.fr/2012/05/700-millions-deuros-retires-des-banques-grecques-lundi-375042" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Les Echos</td>
+							 <td>15/05/2012</td>
+							 <td><mark>96.1%</mark></td>
+							 <td><mark>88.4%</mark></td>
+							 <td><mark>89.5%</mark></td>
+							 <td><mark>91.7%</mark></td>
+							 <td><mark class="valid-index">96.4%</mark></td>
+							 <td><mark class="valid-index">1540
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Grèce: 700M€ retirés des banques hier</td>
+							 <td><a href="https://www.lefigaro.fr/flash-eco/2012/05/15/97002-20120515FILWWW00920-grece-700m-retires-des-banques-hier.php" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Figaro</td>
+							 <td>15/05/2012</td>
+							 <td><mark>94.7%</mark></td>
+							 <td><mark>94.2%</mark></td>
+							 <td><mark>96.3%</mark></td>
+							 <td><mark>94.1%</mark></td>
+							 <td><mark class="valid-index">92.7%</mark></td>
+							 <td><mark class="valid-index">1473
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Grèce : 700M euros retirés des banques lundi</td>
+							 <td><a href="https://www.europe1.fr/international/Grece-700M-euros-retires-des-banques-lundi-828026" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Europe 1</td>
+							 <td>15/05/2012</td>
+							 <td><mark>86%</mark></td>
+							 <td><mark>56%</mark></td>
+							 <td><mark>56%</mark></td>
+							 <td><mark>86%</mark></td>
+							 <td><mark class="valid-index">95.1%</mark></td>
+							 <td><mark class="valid-index">854
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.bfmtv.com/international/retraits-massifs-dans-les-banques-grecques-256590.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>BFM TV</td>
+							 <td>16/05/2012</td>
+							 <td><mark>41.9%</mark></td>
+							 <td><mark>29.5%</mark></td>
+							 <td><mark>25.3%</mark></td>
+							 <td><mark>86.8%</mark></td>
+							 <td><mark class="valid-index">2.4%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Les Grecs, qui redoutent le pire, ont déjà retiré 700 millions d'euros des banques</td>
+							 <td><a href="https://www.ladepeche.fr/article/2012/05/17/1355450-les-grecs-qui-redoutent-le-pire-ont-deja-retire-700-millions-d-euros-des-banques.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Depeche</td>
+							 <td>17/05/2012</td>
+							 <td><mark>52.3%</mark></td>
+							 <td><mark>37.2%</mark></td>
+							 <td><mark>43.7%</mark></td>
+							 <td><mark>87.7%</mark></td>
+							 <td><mark class="valid-index">38.3%</mark></td>
+							 <td><mark class="valid-index">524
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Vent de panique : les Grecs vident leurs comptes en banque</td>
+							 <td><a href="https://www.rtl.fr/actu/international/vent-de-panique-les-grecs-vident-leurs-comptes-en-banque-7748241666" target="_blank" class="clic-link">Clic</a></td>
+							 <td>RTL</td>
+							 <td>16/05/2012</td>
+							 <td><mark>51.6%</mark></td>
+							 <td><mark>28.8%</mark></td>
+							 <td><mark>22.9%</mark></td>
+							 <td><mark>81.7%</mark></td>
+							 <td><mark class="valid-index">2.4%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.challenges.fr/monde/retraits-massifs-dans-les-banques-grecques_290399" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Challenges</td>
+							 <td>16/05/2012</td>
+							 <td><mark>49.1%</mark></td>
+							 <td><mark>30.5%</mark></td>
+							 <td><mark>19.5%</mark></td>
+							 <td><mark>89.6%</mark></td>
+							 <td><mark class="valid-index">2.4%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.20minutes.fr/economie/935323-20120516-retraits-massifs-banques-grecques" target="_blank" class="clic-link">Clic</a></td>
+							 <td>20 Minutes</td>
+							 <td>16/05/12</td>
+							 <td><mark>40.5%</mark></td>
+							 <td><mark>27.3%</mark></td>
+							 <td><mark>26.7%</mark></td>
+							 <td><mark>88.8%</mark></td>
+							 <td><mark class="valid-index">2.4%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Un juge à la tête de la Grèce</td>
+							 <td><a href="https://www.lepoint.fr/economie/un-juge-a-la-tete-de-la-grece-16-05-2012-1462136_28.php#" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Point</td>
+							 <td>16/05/2012</td>
+							 <td><mark>53.7%</mark></td>
+							 <td><mark>22.9%</mark></td>
+							 <td><mark>10.6%</mark></td>
+							 <td><mark>78.6%</mark></td>
+							 <td><mark class="valid-index">2.6%</mark></td>
+							 <td><mark class="valid-index">41
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">La hantise d'une panique bancaire pèse sur la zone euro</td>
+							 <td><a href="https://www.la-croix.com/Archives/2012-05-21/Sauver-la-Grece-contre-vents-et-marees.-La-hantise-d-une-panique-bancaire-pese-sur-la-zone-euro-_NP_-2012-05-21-809087" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Croix</td>
+							 <td>21/05/2012</td>
+							 <td><mark>44.3%</mark></td>
+							 <td><mark>19.2%</mark></td>
+							 <td><mark>7.6%</mark></td>
+							 <td><mark>83.4%</mark></td>
+							 <td><mark class="valid-index">1.9%</mark></td>
+							 <td><mark class="valid-index">31
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lexpress.fr/actualites/2/actualite/retraits-massifs-dans-les-banques-grecques_1115146.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>L'Express</td>
+							 <td>16/05/2012</td>
+							 <td><mark>48.1%</mark></td>
+							 <td><mark>30.5%</mark></td>
+							 <td><mark>19.3%</mark></td>
+							 <td><mark>89.4%</mark></td>
+							 <td><mark class="valid-index">2.4%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lemonde.fr/economie/article/2012/05/16/retraits-massifs-dans-les-banques-grecques_1701918_3234.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Monde</td>
+							 <td>16/05/2012</td>
+							 <td><mark>67%</mark></td>
+							 <td><mark>53%</mark></td>
+							 <td><mark>60.9%</mark></td>
+							 <td><mark>94.3%</mark></td>
+							 <td><mark class="valid-index">51.2%</mark></td>
+							 <td><mark class="valid-index">817</mark></td>
+						</tr>
+				 </tbody>
+			</table>
+				
+			<hr>
+			<h5 class="title-table">Résultat de la comparaison à la dépêche de Reuters</h5>
+			<table id="table-content">
+				 <tbody>
+						<tr>
+							 <th>NOM DE LA DÉPÊCHE</th>
+							 <th>NOM DE L'ARTICLE</th>
+							 <th>LIEN</th>
+							 <th>JOURNAL</th>
+							 <th>DATE</th>
+							 <th>JACCARD</th>
+							 <th>LEVENSHTEIN</th>
+							 <th>SIMILAR TEXT</th>
+							 <th>JARO WINKLER</th>
+							 <th>% TOT. SUBSTRINGS</th>
+							 <th>TAILLE TOT. SUBSTRINGS</th>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">700 millions d'euros retirés des banques grecques lundi</td>
+							 <td><a href="https://www.lesechos.fr/2012/05/700-millions-deuros-retires-des-banques-grecques-lundi-375042" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Les Echos</td>
+							 <td>15/05/2020</td>
+							 <td><mark>44.4%</mark></td>
+							 <td><mark>31.6%</mark></td>
+							 <td><mark>26.4%</mark></td>
+							 <td><mark>81%</mark></td>
+							 <td><mark class="valid-index">2.2%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Grèce: 700M € retirés des banques hier</td>
+							 <td><a href="https://www.lesechos.fr/2012/05/700-millions-deuros-retires-des-banques-grecques-lundi-375042" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Figaro</td>
+							 <td>15/05/2012</td>
+							 <td><mark>44.3%</mark></td>
+							 <td><mark>31.1%</mark></td>
+							 <td><mark>19.1%</mark></td>
+							 <td><mark>89.3%</mark></td>
+							 <td><mark class="valid-index">2.5%</mark></td>
+							 <td><mark class="valid-index">39
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Grèce : 700M euros retirés des banques lundi</td>
+							 <td><a href="https://www.europe1.fr/international/Grece-700M-euros-retires-des-banques-lundi-828026" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Europe 1</td>
+							 <td>15/05/2012</td>
+							 <td><mark>44.4%</mark></td>
+							 <td><mark>23.7%</mark></td>
+							 <td><mark>12.3%</mark></td>
+							 <td><mark>82.7%</mark></td>
+							 <td><mark class="valid-index">3.1%</mark></td>
+							 <td><mark class="valid-index">28
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.bfmtv.com/international/retraits-massifs-dans-les-banques-grecques-256590.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>BFM TV</td>
+							 <td>16/05/2012</td>
+							 <td><mark>73%</mark></td>
+							 <td><mark>51%</mark></td>
+							 <td><mark>59%</mark></td>
+							 <td><mark>91.4%</mark></td>
+							 <td><mark class="valid-index">67.9%</mark></td>
+							 <td><mark class="valid-index">1344
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Les Grecs, qui redoutent le pire, ont déjà retiré 700 millions d'euros des banques</td>
+							 <td><a href="https://www.ladepeche.fr/article/2012/05/17/1355450-les-grecs-qui-redoutent-le-pire-ont-deja-retire-700-millions-d-euros-des-banques.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Dépêche</td>
+							 <td>17/05/2012</td>
+							 <td><mark>50.4%</mark></td>
+							 <td><mark>29.2%</mark></td>
+							 <td><mark>6.9%</mark></td>
+							 <td><mark>79.5%</mark></td>
+							 <td><mark class="valid-index">2.8%</mark></td>
+							 <td><mark class="valid-index">38
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Vent de panique : les Grecs vident leurs comptes en banque</td>
+							 <td><a href="https://www.rtl.fr/actu/international/vent-de-panique-les-grecs-vident-leurs-comptes-en-banque-7748241666" target="_blank" class="clic-link">Clic</a></td>
+							 <td>RTL</td>
+							 <td>16/05/2012</td>
+							 <td><mark>97.6%</mark></td>
+							 <td><mark>74.5%</mark></td>
+							 <td><mark>85.5%</mark></td>
+							 <td><mark>92.7%</mark></td>
+							 <td><mark class="valid-index">90.2%</mark></td>
+							 <td><mark class="valid-index">2313
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.challenges.fr/monde/retraits-massifs-dans-les-banques-grecques_290399" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Challenges</td>
+							 <td>16/05/2020</td>
+							 <td><mark>85.2%</mark></td>
+							 <td><mark>98%</mark></td>
+							 <td><mark>98%</mark></td>
+							 <td><mark>94%</mark></td>
+							 <td><mark class="valid-index">95.4%</mark></td>
+							 <td><mark class="valid-index">2429
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.20minutes.fr/economie/935323-20120516-retraits-massifs-banques-grecques" target="_blank" class="clic-link">Clic</a></td>
+							 <td>20 Minutes</td>
+							 <td>16/05/2012</td>
+							 <td><mark>74.5%</mark></td>
+							 <td><mark>50.9%</mark></td>
+							 <td><mark>57.1%</mark></td>
+							 <td><mark>81.5%</mark></td>
+							 <td><mark class="valid-index">74%</mark></td>
+							 <td><mark class="valid-index">1339
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Un juge à la tête de la Grèce</td>
+							 <td><a href="https://www.lepoint.fr/economie/un-juge-a-la-tete-de-la-grece-16-05-2012-1462136_28.php" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Point</td>
+							 <td>16/05/2012</td>
+							 <td><mark>71.3%</mark></td>
+							 <td><mark>28.4%</mark></td>
+							 <td><mark>29.7%</mark></td>
+							 <td><mark>83.6%</mark></td>
+							 <td><mark class="valid-index">53.7%</mark></td>
+							 <td><mark class="valid-index">1379
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Sauver la Grèce, contre vents et marées. La hantise d'une panique bancaire pèse sur la zone euro</td>
+							 <td><a href="https://www.la-croix.com/Archives/2012-05-21/Sauver-la-Grece-contre-vents-et-marees.-La-hantise-d-une-panique-bancaire-pese-sur-la-zone-euro-_NP_-2012-05-21-809087" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Croix</td>
+							 <td>21/05/2012</td>
+							 <td><mark>48.5%</mark></td>
+							 <td><mark>26.2%</mark></td>
+							 <td><mark>12.9%</mark></td>
+							 <td><mark>78.8%</mark></td>
+							 <td><mark class="valid-index">1.5%</mark></td>
+							 <td><mark class="valid-index">38
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lexpress.fr/actualites/2/actualite/retraits-massifs-dans-les-banques-grecques_1115146.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>L'Express</td>
+							 <td>16/05/2012</td>
+							 <td><mark>96.4%</mark></td>
+							 <td><mark>98.8%</mark></td>
+							 <td><mark>99.3%</mark></td>
+							 <td><mark>89%</mark></td>
+							 <td><mark class="valid-index">99.5%</mark></td>
+							 <td><mark class="valid-index">2545
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lemonde.fr/economie/article/2012/05/16/retraits-massifs-dans-les-banques-grecques_1701918_3234.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Monde</td>
+							 <td>16/05/2012</td>
+							 <td><mark>48.3%</mark></td>
+							 <td><mark>31.6%</mark></td>
+							 <td><mark>30.7%</mark></td>
+							 <td><mark>81.5%</mark></td>
+							 <td><mark class="valid-index">20.8%</mark></td>
+							 <td><mark class="valid-index">364</mark></td>
+						</tr>
+				 </tbody>
+			</table>
+				
+			<h5 class="title-table">Jonction des deux tableaux</h5>
+			<table id="table-content">
+				 <tbody>
+						<tr>
+							 <th>NOM DE LA DÉPÊCHE</th>
+							 <th>NOM DE L'ARTICLE</th>
+							 <th>LIEN</th>
+							 <th>JOURNAL</th>
+							 <th>DATE</th>
+							 <th>JACCARD</th>
+							 <th>LEVENSHTEIN</th>
+							 <th>SIMILAR TEXT</th>
+							 <th>JARO WINKLER</th>
+							 <th>% TOT. SUBSTRINGS</th>
+							 <th>TAILLE TOT. SUBSTRINGS</th>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">700 millions d'euros retirés des banques grecques lundi</td>
+							 <td><a href="https://www.lesechos.fr/2012/05/700-millions-deuros-retires-des-banques-grecques-lundi-375042" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Les Echos</td>
+							 <td>15/05/2012</td>
+							 <td><mark>96.1%</mark></td>
+							 <td><mark>88.4%</mark></td>
+							 <td><mark>89.5%</mark></td>
+							 <td><mark>91.7%</mark></td>
+							 <td><mark class="valid-index">96.4%</mark></td>
+							 <td><mark class="valid-index">1540
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Grèce: 700M€ retirés des banques hier</td>
+							 <td><a href="https://www.lefigaro.fr/flash-eco/2012/05/15/97002-20120515FILWWW00920-grece-700m-retires-des-banques-hier.php" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Figaro</td>
+							 <td>15/05/2012</td>
+							 <td><mark>94.7%</mark></td>
+							 <td><mark>94.2%</mark></td>
+							 <td><mark>96.3%</mark></td>
+							 <td><mark>94.1%</mark></td>
+							 <td><mark class="valid-index">92.7%</mark></td>
+							 <td><mark class="valid-index">1473
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Grèce : 700M euros retirés des banques lundi</td>
+							 <td><a href="https://www.europe1.fr/international/Grece-700M-euros-retires-des-banques-lundi-828026" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Europe 1</td>
+							 <td>15/05/2012</td>
+							 <td><mark>86%</mark></td>
+							 <td><mark>56%</mark></td>
+							 <td><mark>56%</mark></td>
+							 <td><mark>86%</mark></td>
+							 <td><mark class="valid-index">95.1%</mark></td>
+							 <td><mark class="valid-index">854
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.bfmtv.com/international/retraits-massifs-dans-les-banques-grecques-256590.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>BFM TV</td>
+							 <td>16/05/2012</td>
+							 <td><mark>73%</mark></td>
+							 <td><mark>51%</mark></td>
+							 <td><mark>59%</mark></td>
+							 <td><mark>91.4%</mark></td>
+							 <td><mark class="valid-index">67.9%</mark></td>
+							 <td><mark class="valid-index">1344
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Les Grecs, qui redoutent le pire, ont déjà retiré 700 millions d'euros des banques</td>
+							 <td><a href="https://www.ladepeche.fr/article/2012/05/17/1355450-les-grecs-qui-redoutent-le-pire-ont-deja-retire-700-millions-d-euros-des-banques.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Depeche</td>
+							 <td>17/05/2012</td>
+							 <td><mark>52.3%</mark></td>
+							 <td><mark>37.2%</mark></td>
+							 <td><mark>43.7%</mark></td>
+							 <td><mark>87.7%</mark></td>
+							 <td><mark class="valid-index">38.3%</mark></td>
+							 <td><mark class="valid-index">524
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Vent de panique : les Grecs vident leurs comptes en banque</td>
+							 <td><a href="https://www.rtl.fr/actu/international/vent-de-panique-les-grecs-vident-leurs-comptes-en-banque-7748241666" target="_blank" class="clic-link">Clic</a></td>
+							 <td>RTL</td>
+							 <td>16/05/2012</td>
+							 <td><mark>97.6%</mark></td>
+							 <td><mark>74.5%</mark></td>
+							 <td><mark>85.5%</mark></td>
+							 <td><mark>92.7%</mark></td>
+							 <td><mark class="valid-index">90.2%</mark></td>
+							 <td><mark class="valid-index">2313
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.challenges.fr/monde/retraits-massifs-dans-les-banques-grecques_290399" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Challenges</td>
+							 <td>16/05/2020</td>
+							 <td><mark>85.2%</mark></td>
+							 <td><mark>98%</mark></td>
+							 <td><mark>98%</mark></td>
+							 <td><mark>94%</mark></td>
+							 <td><mark class="valid-index">95.4%</mark></td>
+							 <td><mark class="valid-index">2429
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.20minutes.fr/economie/935323-20120516-retraits-massifs-banques-grecques" target="_blank" class="clic-link">Clic</a></td>
+							 <td>20 Minutes</td>
+							 <td>16/05/2012</td>
+							 <td><mark>74.5%</mark></td>
+							 <td><mark>50.9%</mark></td>
+							 <td><mark>57.1%</mark></td>
+							 <td><mark>81.5%</mark></td>
+							 <td><mark class="valid-index">74%</mark></td>
+							 <td><mark class="valid-index">1339
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Un juge à la tête de la Grèce</td>
+							 <td><a href="https://www.lepoint.fr/economie/un-juge-a-la-tete-de-la-grece-16-05-2012-1462136_28.php" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Point</td>
+							 <td>16/05/2012</td>
+							 <td><mark>71.3%</mark></td>
+							 <td><mark>28.4%</mark></td>
+							 <td><mark>29.7%</mark></td>
+							 <td><mark>83.6%</mark></td>
+							 <td><mark class="valid-index">53.7%</mark></td>
+							 <td><mark class="valid-index">1379
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">La hantise d'une panique bancaire pèse sur la zone euro</td>
+							 <td><a href="https://www.la-croix.com/Archives/2012-05-21/Sauver-la-Grece-contre-vents-et-marees.-La-hantise-d-une-panique-bancaire-pese-sur-la-zone-euro-_NP_-2012-05-21-809087" target="_blank" class="clic-link">Clic</a></td>
+							 <td>La Croix</td>
+							 <td>21/05/2012</td>
+							 <td><mark>44.3%</mark></td>
+							 <td><mark>19.2%</mark></td>
+							 <td><mark>7.6%</mark></td>
+							 <td><mark>83.4%</mark></td>
+							 <td><mark class="valid-index">1.9%</mark></td>
+							 <td><mark class="valid-index">31
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lexpress.fr/actualites/2/actualite/retraits-massifs-dans-les-banques-grecques_1115146.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>L'Express</td>
+							 <td>16/05/2012</td>
+							 <td><mark>96.4%</mark></td>
+							 <td><mark>98.8%</mark></td>
+							 <td><mark>99.3%</mark></td>
+							 <td><mark>89%</mark></td>
+							 <td><mark class="valid-index">99.5%</mark></td>
+							 <td><mark class="valid-index">2545
+									</mark>
+							 </td>
+						</tr>
+						<tr>
+							 <td class="name-articles">Grèce: 700 millions d'euros retirés des banques grecques lundi (président)</td>
+							 <td class="name-articles">Retraits massifs dans les banques grecques</td>
+							 <td><a href="https://www.lemonde.fr/economie/article/2012/05/16/retraits-massifs-dans-les-banques-grecques_1701918_3234.html" target="_blank" class="clic-link">Clic</a></td>
+							 <td>Le Monde</td>
+							 <td>16/05/2012</td>
+							 <td><mark>67%</mark></td>
+							 <td><mark>53%</mark></td>
+							 <td><mark>60.9%</mark></td>
+							 <td><mark>94.3%</mark></td>
+							 <td><mark class="valid-index">51.2%</mark></td>
+							 <td><mark class="valid-index">817</mark></td>
+						</tr>
+				 </tbody>
+			</table>
+	
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/moment.min.js"></script>
+  <script src="../../assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#searchSidebar").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#listSidebar li").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

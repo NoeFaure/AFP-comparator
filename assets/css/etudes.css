@@ -47,3 +47,7 @@ table {
 .font-list {
 	font-weight: 600;
 }
+
+.title-table {
+	margin-bottom: -2em;
+}
