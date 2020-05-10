@@ -68,6 +68,16 @@ function intersect(a, b) {
 
 function jaccard(a,b) {
 	
+	// Addtionial treatment
+	a = a.replace(/[']+/g, ' ');
+	b = b.replace(/[']+/g, ' ');
+	
+	a = a.replace(/[.]+/g, '');
+	b = b.replace(/[.]+/g, '');
+	
+	a = a.replace(/[,]+/g, '');
+	b = b.replace(/[,]+/g, '');
+	
 	// Convert string in arrays
 	a = a.split(" ");
 	b = b.split(" ");
