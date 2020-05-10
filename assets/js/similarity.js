@@ -113,6 +113,12 @@ function jaccard(a,b) {
   var union = a.length + b.length;
   var jacardIndex = (intersection / union);
 	
+	/*
+	alert("a ("+ a.length +"): " + a);
+	alert("b ("+ b.length +"): " + b);
+	alert("intersecteion : " + intersection);
+	alert("union : " + union);*/
+	
 	// Temporary fix
 	if (jacardIndex > 1) {
 		return 1;
