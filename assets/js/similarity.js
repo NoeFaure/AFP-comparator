@@ -51,6 +51,7 @@ function levDist(s, t) {
 }
 
 function pourcentageLevenstein(textA, textB) {
+	
 	var levDis = levDist(textA,textB);
 	var bigger = Math.max(textA.length, textB.length);
 	
@@ -58,17 +59,43 @@ function pourcentageLevenstein(textA, textB) {
 }
 // ======= Jaccard Algorithm =======
 
-function intersect(a, b) {
-    var t;
-    if (b.length > a.length) t = b, b = a, a = t; // indexOf to loop over shorter
-    return a.filter(function (e) {
-        return b.indexOf(e) > -1;
-    });
+function intersectTwo(arr1, arr2) {
+	var obj = {}, matched = [], unmatched = [];
+	for (var i = 0, l = arr1.length; i < l; i++) {
+			obj[arr1[i]] = (obj[arr1[i]] || 0) + 1;
+	}
+	for (i = 0; i < arr2.length; i++) {
+			var val = arr2[i];
+			if (val in obj) {
+					matched.push(val);
+			} else {
+					unmatched.push(val);
+			}
+	}
+  
+	return matched;
+}
+
+function intersect(a, b){
+	var common = [];
+	
+	for(var i=0 ; i<a.length ; ++i) {
+    for(var j=0 ; j<b.length ; ++j) {
+      if(a[i] == b[j]) {
+        common.push(b[j]);
+				// Remove element
+        index = b.indexOf(b[j]);
+        b.splice(index, 1);
+				break;
+      }
+    }
+  }
+	return common;
 }
 
 function jaccard(a,b) {
 	
-	// Addtionial treatment
+	// Addtionial treatments
 	a = a.replace(/[']+/g, ' ');
 	b = b.replace(/[']+/g, ' ');
 	
@@ -82,10 +109,10 @@ function jaccard(a,b) {
 	a = a.split(" ");
 	b = b.split(" ");
 	
-  var intersection = (intersect(a, b)).length;
-  var union = a.length + b.length - intersection;
-  var jacardIndex = (intersection / union)
-  
+  var intersection = intersect(a, b).length;
+  var union = a.length + b.length;
+  var jacardIndex = (intersection / union);
+	
 	// Temporary fix
 	if (jacardIndex > 1) {
 		return 1;
