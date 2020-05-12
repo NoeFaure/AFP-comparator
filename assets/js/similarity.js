@@ -1,21 +1,25 @@
-function pourcentageLevenstein(textA, textB) {
+// ======= Prepare treatments =======
+function preTreatmentForText(a){
 	
 	// Addtionial treatments
-	textA = textA.replace(/[']+/g, ' ');
-	textB = textB.replace(/[']+/g, ' ');
-	
-	textA = textA.replace(/[.]+/g, '');
-	textB = textB.replace(/[.]+/g, '');
-	
-	textA = textA.replace(/[,]+/g, '');
-	textB = textB.replace(/[,]+/g, '');
+	a = a.replace(/[']+/g, ' ');	
+	a = a.replace(/[.]+/g, '');
+	a = a.replace(/[,]+/g, '');
 	
 	// Convert string in arrays
-	textA = textA.split(" ");
-	textB = textB.split(" ");
+	a = a.split(" ");
 	
-	var levDis = levDist(textA,textB);
-	var bigger = Math.max(textA.length, textB.length);
+	return a;
+	
+}
+
+function pourcentageLevenstein(a, b) {
+	
+	a = preTreatmentForText(a);
+	b = preTreatmentForText(b);
+	
+	var levDis = levDist(a,b);
+	var bigger = Math.max(a.length, b.length);
 	
 	return (bigger - levDis)/bigger;
 }
@@ -39,20 +43,9 @@ function intersect(a, b){
 }
 
 function jaccard(a,b) {
-	
-	// Addtionial treatments
-	a = a.replace(/[']+/g, ' ');
-	b = b.replace(/[']+/g, ' ');
-	
-	a = a.replace(/[.]+/g, '');
-	b = b.replace(/[.]+/g, '');
-	
-	a = a.replace(/[,]+/g, '');
-	b = b.replace(/[,]+/g, '');
-	
-	// Convert string in arrays
-	a = a.split(" ");
-	b = b.split(" ");
+
+	a = preTreatmentForText(a);
+	b = preTreatmentForText(b);
 	
 	//console.log(intersect(a, b));
   var intersection = intersect(a, b).length;
@@ -192,6 +185,16 @@ function preTreatment(a) {
 	return a;
 }
 
+// ======= Jaro Winkler =======
+function useJaroWinkler(a,b) {
+	
+	a = preTreatmentForText(a);
+	b = preTreatmentForText(b);
+	
+	return jaro_winkler(a, b);
+	
+}
+
 
 // ======= Show Results =======
 
@@ -213,7 +216,7 @@ function actionSimilarity(){
 	var longestCommonStringSize = longestCommonString.length;
 	var ratioLongest = ratioLongestString(longestCommonStringSize, firstArticle, secondArticle);
 	var similiRatio = similarTextRatio(firstArticle, secondArticle);
-	var jaroWinklerRatio = jaro_winkler(firstArticle, secondArticle);
+	var jaroWinklerRatio = useJaroWinkler(firstArticle, secondArticle);
 	
 	//Longest common substring
 	$(".longestString").text(longestCommonString);

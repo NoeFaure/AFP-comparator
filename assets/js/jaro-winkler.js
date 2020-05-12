@@ -2,8 +2,8 @@ function jaro_winkler(a, b) {
 
   if (!a || !b) { return 0.0; }
 
-  a = a.trim().toUpperCase();
-  b = b.trim().toUpperCase();
+  //a = a.trim().toUpperCase();
+  //b = b.trim().toUpperCase();
   var a_len = a.length;
   var b_len = b.length;
   var a_flag = []; var b_flag = [];
