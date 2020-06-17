@@ -136,3 +136,7 @@ h5 {
 	font-size: 1.25rem;
 	font-weight: 600;
 }
+
+.download-button {
+	margin-left: auto;
+}
